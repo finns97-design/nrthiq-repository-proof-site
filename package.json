@@ -1,0 +1,23 @@
+{
+  "name": "nrthiq-repository-proof-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A public test site for NRTHIQ's repository publishing proofs. Not a real business.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "gray-matter": "4.0.3",
+    "marked": "^15.0.0",
+    "next": "16.4.5",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.9",
+    "@types/react": "19.2.18",
+    "typescript": "^5.5.3"
+  }
+}
