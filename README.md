@@ -15,6 +15,10 @@ It exists so that NRTHIQ can prove, on a real repository and a real public deplo
 
 The contract is NRTHIQ's `docs/GIT_PAGE_CONTRACT.md`.
 
+## Deployments
+
+The site deploys from `main` through the hosting provider's GitHub integration. Each production deployment is recorded on GitHub as a deployment to the `Production` environment, which is what NRTHIQ reads to decide that a commit is live.
+
 ## Indexing
 
 The site sends `noindex`. A made-up business should not appear in a search index. The switch is `indexable` in `lib/site.ts`.
