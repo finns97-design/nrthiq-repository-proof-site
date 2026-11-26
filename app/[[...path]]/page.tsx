@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { marked } from "marked";
 import { allPages, pageAt } from "../../lib/content";
+import { site } from "../../lib/site";
 
 // Built from the files, once, at build time. An address no file names is a real 404.
 export const dynamicParams = false;
@@ -16,7 +17,8 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const page = pageAt((await params).path);
   if (!page) return {};
   // THE TITLE AND THE DESCRIPTION ARE THE FILE'S OWN, printed exactly.
-  return { title: { absolute: page.title }, description: page.description };
+  // AND ITS CANONICAL IS ITSELF: the production address of the path its file names.
+  return { title: { absolute: page.title }, description: page.description, alternates: { canonical: `${site.origin}${page.path === "/" ? "/" : page.path}` } };
 }
 
 /** The pages filed under a section, for the two index pages: by the section's own path prefix. */
