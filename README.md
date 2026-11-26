@@ -17,7 +17,7 @@ The contract is NRTHIQ's `docs/GIT_PAGE_CONTRACT.md`.
 
 ## Deployments
 
-The site deploys from `main` through the hosting provider's GitHub integration. Each production deployment is recorded on GitHub as a deployment to the `Production` environment, which is what NRTHIQ reads to decide that a commit is live.
+The site deploys from `main` through the hosting provider's GitHub integration. Each production deployment is recorded on GitHub as a deployment to the `Production` environment, which is what NRTHIQ reads to decide that a commit is live. (The hosting project's "create deployments" option must stay on for that record to be written.)
 
 ## Indexing
 
